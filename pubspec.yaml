@@ -1,0 +1,24 @@
+name: OpenWeatherApp
+description: Weather App with API hits
+version: 1.0.0+1
+author: Shivam Goyal
+homepage: https://shivamgoyal.co
+repository: https://github.com/ShivamGoyal1899/OpenWeatherApp
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  http: 0.12.0+2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
