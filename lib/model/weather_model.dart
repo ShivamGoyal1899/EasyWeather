@@ -40,36 +40,37 @@ class Weather {
   });
 
   factory Weather.fromJson(Map<String, dynamic> json) => new Weather(
-    coord: Coord.fromJson(json["coord"]),
-    weather: new List<WeatherElement>.from(json["weather"].map((x) => WeatherElement.fromJson(x))),
-    base: json["base"],
-    main: Main.fromJson(json["main"]),
-    visibility: json["visibility"],
-    wind: Wind.fromJson(json["wind"]),
-    clouds: Clouds.fromJson(json["clouds"]),
-    dt: json["dt"],
-    sys: Sys.fromJson(json["sys"]),
-    timezone: json["timezone"],
-    id: json["id"],
-    name: json["name"],
-    cod: json["cod"],
-  );
+        coord: Coord.fromJson(json["coord"]),
+        weather: new List<WeatherElement>.from(
+            json["weather"].map((x) => WeatherElement.fromJson(x))),
+        base: json["base"],
+        main: Main.fromJson(json["main"]),
+        visibility: json["visibility"],
+        wind: Wind.fromJson(json["wind"]),
+        clouds: Clouds.fromJson(json["clouds"]),
+        dt: json["dt"],
+        sys: Sys.fromJson(json["sys"]),
+        timezone: json["timezone"],
+        id: json["id"],
+        name: json["name"],
+        cod: json["cod"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "coord": coord.toJson(),
-    "weather": new List<dynamic>.from(weather.map((x) => x.toJson())),
-    "base": base,
-    "main": main.toJson(),
-    "visibility": visibility,
-    "wind": wind.toJson(),
-    "clouds": clouds.toJson(),
-    "dt": dt,
-    "sys": sys.toJson(),
-    "timezone": timezone,
-    "id": id,
-    "name": name,
-    "cod": cod,
-  };
+        "coord": coord.toJson(),
+        "weather": new List<dynamic>.from(weather.map((x) => x.toJson())),
+        "base": base,
+        "main": main.toJson(),
+        "visibility": visibility,
+        "wind": wind.toJson(),
+        "clouds": clouds.toJson(),
+        "dt": dt,
+        "sys": sys.toJson(),
+        "timezone": timezone,
+        "id": id,
+        "name": name,
+        "cod": cod,
+      };
 }
 
 class Clouds {
@@ -80,12 +81,12 @@ class Clouds {
   });
 
   factory Clouds.fromJson(Map<String, dynamic> json) => new Clouds(
-    all: json["all"],
-  );
+        all: json["all"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "all": all,
-  };
+        "all": all,
+      };
 }
 
 class Coord {
@@ -98,14 +99,14 @@ class Coord {
   });
 
   factory Coord.fromJson(Map<String, dynamic> json) => new Coord(
-    lon: json["lon"].toDouble(),
-    lat: json["lat"].toDouble(),
-  );
+        lon: json["lon"].toDouble(),
+        lat: json["lat"].toDouble(),
+      );
 
   Map<String, dynamic> toJson() => {
-    "lon": lon,
-    "lat": lat,
-  };
+        "lon": lon,
+        "lat": lat,
+      };
 }
 
 class Main {
@@ -124,20 +125,20 @@ class Main {
   });
 
   factory Main.fromJson(Map<String, dynamic> json) => new Main(
-    temp: json["temp"].toDouble(),
-    pressure: json["pressure"],
-    humidity: json["humidity"],
-    tempMin: json["temp_min"].toDouble(),
-    tempMax: json["temp_max"].toDouble(),
-  );
+        temp: json["temp"].toDouble(),
+        pressure: json["pressure"],
+        humidity: json["humidity"],
+        tempMin: json["temp_min"].toDouble(),
+        tempMax: json["temp_max"].toDouble(),
+      );
 
   Map<String, dynamic> toJson() => {
-    "temp": temp,
-    "pressure": pressure,
-    "humidity": humidity,
-    "temp_min": tempMin,
-    "temp_max": tempMax,
-  };
+        "temp": temp,
+        "pressure": pressure,
+        "humidity": humidity,
+        "temp_min": tempMin,
+        "temp_max": tempMax,
+      };
 }
 
 class Sys {
@@ -158,22 +159,22 @@ class Sys {
   });
 
   factory Sys.fromJson(Map<String, dynamic> json) => new Sys(
-    type: json["type"],
-    id: json["id"],
-    message: json["message"].toDouble(),
-    country: json["country"],
-    sunrise: json["sunrise"],
-    sunset: json["sunset"],
-  );
+        type: json["type"],
+        id: json["id"],
+        message: json["message"].toDouble(),
+        country: json["country"],
+        sunrise: json["sunrise"],
+        sunset: json["sunset"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "type": type,
-    "id": id,
-    "message": message,
-    "country": country,
-    "sunrise": sunrise,
-    "sunset": sunset,
-  };
+        "type": type,
+        "id": id,
+        "message": message,
+        "country": country,
+        "sunrise": sunrise,
+        "sunset": sunset,
+      };
 }
 
 class WeatherElement {
@@ -189,19 +190,20 @@ class WeatherElement {
     this.icon,
   });
 
-  factory WeatherElement.fromJson(Map<String, dynamic> json) => new WeatherElement(
-    id: json["id"],
-    main: json["main"],
-    description: json["description"],
-    icon: json["icon"],
-  );
+  factory WeatherElement.fromJson(Map<String, dynamic> json) =>
+      new WeatherElement(
+        id: json["id"],
+        main: json["main"],
+        description: json["description"],
+        icon: json["icon"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "main": main,
-    "description": description,
-    "icon": icon,
-  };
+        "id": id,
+        "main": main,
+        "description": description,
+        "icon": icon,
+      };
 }
 
 class Wind {
@@ -214,12 +216,12 @@ class Wind {
   });
 
   factory Wind.fromJson(Map<String, dynamic> json) => new Wind(
-    speed: json["speed"].toDouble(),
-    deg: json["deg"],
-  );
+        speed: json["speed"].toDouble(),
+        deg: json["deg"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "speed": speed,
-    "deg": deg,
-  };
+        "speed": speed,
+        "deg": deg,
+      };
 }

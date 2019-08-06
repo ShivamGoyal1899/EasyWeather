@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:OpenWeatherApp/model/weather_model.dart';
 import 'package:OpenWeatherApp/services/api_services.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+import 'appBar/appbar.dart';
+
+void main() {
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget {
   @override
@@ -22,29 +29,14 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          accentColor: Colors.orangeAccent,
-          scaffoldBackgroundColor: Colors.white),
+        accentColor: Colors.orangeAccent,
+        scaffoldBackgroundColor: Colors.white,
+        fontFamily: 'Raleway',
+        primaryColor: Colors.black,
+        primaryIconTheme: IconThemeData(color: Colors.black),
+      ),
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0.0,
-          leading: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0),
-            child: IconButton(
-              icon: Icon(Icons.menu, color: Colors.black),
-              onPressed: () {},
-            ),
-          ),
-          centerTitle: true,
-          actions: <Widget>[
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: IconButton(
-                  icon: Icon(Icons.search, color: Colors.black),
-                  onPressed: () {}),
-            )
-          ],
-        ),
+        appBar: CustomAppBar(),
         body: FutureBuilder<Weather>(
           future: api.getWeather(),
           builder: (context, snapshot) {
@@ -55,7 +47,7 @@ class _MyAppState extends State<MyApp> {
                   child: Column(
                     children: <Widget>[
                       SizedBox(
-                        height: 10.0,
+                        height: 20.0,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -72,7 +64,10 @@ class _MyAppState extends State<MyApp> {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5.0)),
                             elevation: 4.0,
-                            onPressed: () {},
+                            onPressed: null,
+                            disabledColor: Colors.orange,
+                            disabledElevation: 4.0,
+                            disabledTextColor: Colors.black,
                             child: Container(
                               alignment: Alignment.center,
                               width: 80.0,
@@ -80,7 +75,7 @@ class _MyAppState extends State<MyApp> {
                                 "Today",
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w700,
                                     fontSize: 16.0),
                               ),
                             ),
@@ -102,7 +97,7 @@ class _MyAppState extends State<MyApp> {
                               image: DecorationImage(
                                   image: AssetImage('assets/images/header.jpg'),
                                   alignment: Alignment.centerRight)),
-                          height: 200.0,
+                          height: 240.0,
                           child: Padding(
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 40.0),
@@ -113,41 +108,44 @@ class _MyAppState extends State<MyApp> {
                               children: <Widget>[
                                 Text(snapshot.data.name,
                                     style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 40.0,
-                                        fontWeight: FontWeight.w600)),
+                                        fontSize: 45.0,
+                                        fontWeight: FontWeight.w700)),
                                 Text(
                                     (snapshot.data.main.temp - 273.15)
                                             .toInt()
                                             .toString() +
                                         '°',
                                     style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 60.0,
+                                        fontSize: 80.0,
                                         fontWeight: FontWeight.w700)),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    Image.asset(
-                                      'assets/images/sun.png',
-                                      width: 25,
-                                    ),
-                                    Text(
-                                        '  ' +
-                                            snapshot
-                                                .data.weather[0].description[0]
-                                                .toUpperCase() +
-                                            snapshot.data.weather[0].description
-                                                .substring(1),
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 14.0,
-                                            fontWeight: FontWeight.w500)),
-                                    SizedBox(
-                                      height: 10.0,
-                                    )
-                                  ],
+                                Container(
+                                  height: 25,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      Image.network(
+                                        'http://openweathermap.org/img/wn/' +
+                                            snapshot.data.weather[0].icon +
+                                            '.png',
+                                        width: 25,
+                                      ),
+                                      Text(
+                                          '  ' +
+                                              snapshot.data.weather[0]
+                                                  .description[0]
+                                                  .toUpperCase() +
+                                              snapshot
+                                                  .data.weather[0].description
+                                                  .substring(1),
+                                          style: TextStyle(
+                                              fontSize: 16.0,
+                                              fontWeight: FontWeight.w500)),
+                                      SizedBox(
+                                        height: 10.0,
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
@@ -159,9 +157,7 @@ class _MyAppState extends State<MyApp> {
                           child: Text(
                             'Details',
                             style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 24.0,
-                                fontWeight: FontWeight.w700),
+                                fontSize: 24.0, fontWeight: FontWeight.w700),
                           ),
                         ),
                       ),
@@ -181,7 +177,10 @@ class _MyAppState extends State<MyApp> {
                                         borderRadius:
                                             BorderRadius.circular(5.0)),
                                     elevation: 2.0,
-                                    onPressed: () {},
+                                    onPressed: null,
+                                    disabledColor: Colors.white,
+                                    disabledElevation: 2.0,
+                                    disabledTextColor: Colors.black,
                                     child: Container(
                                       alignment: Alignment.center,
                                       width: 140.0,
@@ -215,7 +214,6 @@ class _MyAppState extends State<MyApp> {
                                               Text(
                                                 "  Humidity",
                                                 style: TextStyle(
-                                                    color: Colors.black,
                                                     fontWeight: FontWeight.w500,
                                                     fontSize: 16.0),
                                               ),
@@ -227,7 +225,6 @@ class _MyAppState extends State<MyApp> {
                                                     .toString() +
                                                 "%",
                                             style: TextStyle(
-                                                color: Colors.black,
                                                 fontWeight: FontWeight.w700,
                                                 fontSize: 24.0),
                                           )
@@ -241,7 +238,10 @@ class _MyAppState extends State<MyApp> {
                                         borderRadius:
                                             BorderRadius.circular(5.0)),
                                     elevation: 2.0,
-                                    onPressed: () {},
+                                    onPressed: null,
+                                    disabledColor: Colors.white,
+                                    disabledElevation: 2.0,
+                                    disabledTextColor: Colors.black,
                                     child: Container(
                                       alignment: Alignment.center,
                                       width: 140.0,
@@ -274,7 +274,6 @@ class _MyAppState extends State<MyApp> {
                                               Text(
                                                 "  Visibility",
                                                 style: TextStyle(
-                                                    color: Colors.black,
                                                     fontWeight: FontWeight.w500,
                                                     fontSize: 16.0),
                                               ),
@@ -284,7 +283,6 @@ class _MyAppState extends State<MyApp> {
                                           Text(
                                             snapshot.data.visibility.toString(),
                                             style: TextStyle(
-                                                color: Colors.black,
                                                 fontWeight: FontWeight.w700,
                                                 fontSize: 24.0),
                                           )
@@ -304,7 +302,10 @@ class _MyAppState extends State<MyApp> {
                                         borderRadius:
                                             BorderRadius.circular(5.0)),
                                     elevation: 2.0,
-                                    onPressed: () {},
+                                    onPressed: null,
+                                    disabledColor: Colors.white,
+                                    disabledElevation: 2.0,
+                                    disabledTextColor: Colors.black,
                                     child: Container(
                                       alignment: Alignment.center,
                                       width: 140.0,
@@ -337,7 +338,6 @@ class _MyAppState extends State<MyApp> {
                                               Text(
                                                 "  Wind",
                                                 style: TextStyle(
-                                                    color: Colors.black,
                                                     fontWeight: FontWeight.w500,
                                                     fontSize: 16.0),
                                               ),
@@ -349,7 +349,6 @@ class _MyAppState extends State<MyApp> {
                                                     .toString() +
                                                 " km/h",
                                             style: TextStyle(
-                                                color: Colors.black,
                                                 fontWeight: FontWeight.w700,
                                                 fontSize: 24.0),
                                           )
@@ -363,7 +362,10 @@ class _MyAppState extends State<MyApp> {
                                         borderRadius:
                                             BorderRadius.circular(5.0)),
                                     elevation: 2.0,
-                                    onPressed: () {},
+                                    onPressed: null,
+                                    disabledColor: Colors.white,
+                                    disabledElevation: 2.0,
+                                    disabledTextColor: Colors.black,
                                     child: Container(
                                       alignment: Alignment.center,
                                       width: 140.0,
@@ -396,7 +398,6 @@ class _MyAppState extends State<MyApp> {
                                               Text(
                                                 "  Pressure",
                                                 style: TextStyle(
-                                                    color: Colors.black,
                                                     fontWeight: FontWeight.w500,
                                                     fontSize: 16.0),
                                               ),
@@ -408,7 +409,6 @@ class _MyAppState extends State<MyApp> {
                                                     .toString() +
                                                 " hpa",
                                             style: TextStyle(
-                                                color: Colors.black,
                                                 fontWeight: FontWeight.w700,
                                                 fontSize: 24.0),
                                           )
@@ -423,29 +423,6 @@ class _MyAppState extends State<MyApp> {
                           ),
                         ),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          RaisedButton(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(5.0)),
-                            elevation: 4.0,
-                            onPressed: () {},
-                            child: Container(
-                              alignment: Alignment.center,
-                              width: 150.0,
-                              child: Text(
-                                "More Details",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 14.0),
-                              ),
-                            ),
-                            color: Colors.orange,
-                          ),
-                        ],
-                      )
                     ],
                   ),
                 ),
