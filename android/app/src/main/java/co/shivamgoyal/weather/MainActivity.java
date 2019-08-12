@@ -1,4 +1,4 @@
-package com.example.openweatherapp;
+package co.shivamgoyal.weather;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

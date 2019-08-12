@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.openweatherapp">
+    package="co.shivamgoyal.weather">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
@@ -9,10 +9,10 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="OpenWeatherApp"
+        android:label="Weather"
         android:icon="@mipmap/ic_launcher">
         <activity
-            android:name="com.example.openweatherapp.MainActivity"
+            android:name="co.shivamgoyal.weather.MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

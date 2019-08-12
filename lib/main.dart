@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'OpenWeatherApp',
+          'Weather',
           style: TextStyle(fontWeight: FontWeight.w700, color: Colors.black),
         ),
         actions: <Widget>[

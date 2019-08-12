@@ -1,6 +1,6 @@
-# openweatherapp
+# weather
 
-A new Flutter project.
+Weather App using OpenWeatherMap.org API
 
 ## Getting Started
 
