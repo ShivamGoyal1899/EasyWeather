@@ -4,7 +4,7 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/ShivamGoyal1899/EasyWeather/blob/master/LICENSE">
+  <a href="https://github.com/ShivamGoyal1899/EasyWeather/actions?query=workflow%3A%22Flutter+CI%22">
 <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/ShivamGoyal1899/EasyWeather/Flutter CI?label=Flutter%20CI&logo=GitHub&style=for-the-badge">
 </a>
   <a href="https://github.com/ShivamGoyal1899/EasyWeather/blob/master/LICENSE">
