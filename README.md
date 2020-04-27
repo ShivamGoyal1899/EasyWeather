@@ -1,80 +1,94 @@
-## Weather App
-This is the code repository of the Android/iOS Weather App. The Weather App uses [OpenWeatherMap.org](https://openweathermap.org) API to get the realtime weather statistics.
+<p align="center">
+  <a href="https://github.com/ShivamGoyal1899/EasyWeather">
+    <img alt="EasyWeather" src="./readme/EasyWeather - 3000x1000.png" width="100%" />
+  </a>
+</p>
+<p align="center">
+  <a href="https://github.com/ShivamGoyal1899/EasyWeather/blob/master/LICENSE">
+<img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/ShivamGoyal1899/EasyWeather/Flutter CI?label=Flutter%20CI&logo=GitHub&style=for-the-badge">
+</a>
+  <a href="https://github.com/ShivamGoyal1899/EasyWeather/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/ShivamGoyal1899/EasyWeather?style=for-the-badge" alt="EasyWeather is released under the GNU General Public License." />
+  </a>
+  <a href="https://github.com/ShivamGoyal1899/EasyWeather/releases">
+    <img src="https://img.shields.io/github/v/release/ShivamGoyal1899/EasyWeather?include_prereleases&style=for-the-badge" alt="Latest Version Available." />
+  </a>
+  <a href="https://github.com/ShivamGoyal1899/EasyWeather/archive/master.zip">
+    <img src="https://img.shields.io/github/repo-size/ShivamGoyal1899/EasyWeather?style=for-the-badge" alt="GitHub Repository size." />
+  </a>
+  <a href="https://github.com/ShivamGoyal1899/EasyWeather/releases">
+    <img src="https://img.shields.io/github/downloads/ShivamGoyal1899/EasyWeather/total?style=for-the-badge" alt="Total downloads on GitHub." />
+  </a>
+</p>
+<p align="center">
+  EasyWeather uses OpenWeatherMap.org API to get the realtime weather statistics.
+</p>
+<p align="center">
+Show some love 💜 and Star ⭐️ the Repository to support the project.
+</p>
 
-The source code is **100% Dart**, and everything resides in the [/lib](https://github.com/ShivamGoyal1899/WeatherApp/tree/master/lib) folder.
+## :bookmark_tabs: What’s In This Document
 
-### Show some :heart: and star the repo to support the project
+- [Get Up and Running in 5 Minutes](#rocket-get-up-and-running-in-5-minutes)
+- [Flutter / Dart Packages Used](#ballot_box-flutter--dart-packages-used)
+- [Versioning](#label-versioning)
+- [Queries / Bugs](#question-queries--bugs)
+- [License](#memo-license)
+- [Thanks to Contributors and Sponsors](#purple_heart-thanks)
 
-[![GitHub stars](https://img.shields.io/github/stars/ShivamGoyal1899/WeatherApp.svg?style=social&label=Star)](https://github.com/ShivamGoyal1899/WeatherApp) [![GitHub forks](https://img.shields.io/github/forks/ShivamGoyal1899/WeatherApp.svg?style=social&label=Fork)](https://github.com/ShivamGoyal1899/WeatherApp/fork) [![GitHub watchers](https://img.shields.io/github/watchers/ShivamGoyal1899/WeatherApp.svg?style=social&label=Watch)](https://github.com/ShivamGoyal1899/WeatherApp) [![GitHub followers](https://img.shields.io/github/followers/ShivamGoyal1899.svg?style=social&label=Follow)](https://github.com/ShivamGoyal1899/)
-[![Twitter Follow](https://img.shields.io/twitter/follow/ShivamGoyal1899.svg?style=social)](https://twitter.com/ShivamGoyal1899)
+## :rocket: Get Up and Running in 5 Minutes
 
-[![Open Source Love](https://img.shields.io/badge/Open%20Source-seagreen?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![License](https://img.shields.io/badge/license-MIT-red.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Repo Size](https://img.shields.io/github/repo-size/ShivamGoyal1899/WeatherApp?style=for-the-badge)](https://github.com/ShivamGoyal1899/WeatherApp)
-[![Release](https://img.shields.io/github/v/release/ShivamGoyal1899/WeatherApp?style=for-the-badge)](https://github.com/ShivamGoyal1899/WeatherApp/releases/download/v2.0.0/WeatherApp.v2.0.0.apk)
+You can get the EasyWeather up and running on your local dev environment in 5 minutes with these four steps:
 
-## Download Android App
-Weather Android App is available [here](https://github.com/ShivamGoyal1899/WeatherApp/releases/download/v2.0.0/WeatherApp.v2.0.0.apk) to download.
+1. **Install the Flutter SDK & Android Studio. [Instructions](https://medium.com/enappd/install-flutter-on-windows-and-mac-1fd1dde453ba).**
 
-## Tech Stack
-1. Flutter
-2. Firebase
-3. OpenWeatherMap.org API
+2. **Open Terminal & navigate to the root directory of the project.**
 
-## Flutter Packages Used
-1. http: ^0.12.0+2
+    ```shell
+    cd EasyWeather
+    ```
 
-## Versioning
-I've used [Semantic Versioning 2.0.0](https://semver.org/) for versioning throughout the app.
+3. **Run and launch the build on preferred device.**
 
-## Project Created & Maintained By
+   ```shell
+   flutter run
+   ```
 
-### Shivam Goyal
-Flutter Developer | Network Security | ML Enthusiast | Sophomore | Blogger
+4. **Open the source code and start editing!**
 
-<a href="https://shivamgoyal.co"><img src="https://shivamgoyal.co/credits.png" width="60"></a>
-<a href="https://medium.com/@ShivamGoyal1899"><img src="https://github.com/aritraroy/social-icons/blob/master/medium-icon.png?raw=true" width="60"></a>
-<a href="https://twitter.com/ShivamGoyal1899"><img src="https://github.com/aritraroy/social-icons/blob/master/twitter-icon.png?raw=true" width="60"></a>
-<a href="https://linkedin.com/in/ShivamGoyal1899"><img src="https://github.com/aritraroy/social-icons/blob/master/linkedin-icon.png?raw=true" width="60"></a>
-<a href="https://facebook.com/ShivamGoyal1899"><img src="https://github.com/aritraroy/social-icons/blob/master/facebook-icon.png?raw=true" width="60"></a>
-<a href="https://instagram.com/shivamgoyal.co"><img src="https://github.com/aritraroy/social-icons/blob/master/instagram-icon.png?raw=true" width="60"></a>
+   Your app is now running on your physical device or emulator. Open the `lib` directory in Android Studio itself and edit `*.dart` files. Hot Reload your changes, and the app will update in real time!
 
-## Found this project useful?
+At this point, you’ve got the fully functional EasyWeather App running. For additional information on how you can customize your Flutter Apps, see [Google Codelabs](https://codelabs.developers.google.com/codelabs/flutter/) and [HackerNoon Guide](https://hackernoon.com/making-the-most-of-flutter-from-basics-to-customization-433171581d01).
 
-If you found this project useful, then please consider giving it a :star: on Github and sharing it with your friends via social media.
+## :ballot_box: Flutter / Dart Packages Used
+|    Package Name  	| Package Version 	|                           Package URL                          	|    Package Name      	| Package Version 	|                           Package URL                          	|
+|:----------------:	|:-------: |:-----------------------------------------------------------: |:-----------------: |:-----:	|:--------------------------------------------------------------:	|
+| cupertino_icons  	| 0.1.2    | [Open on pub.dev](https://pub.dev/packages/cupertino_icons)  | intl               | 0.16.1 | [Open on pub.dev](https://pub.dev/packages/intl)              	|
+| geolocator      	| 5.3.1    | [Open on pub.dev](https://pub.dev/packages/geolocator)       | share              | 0.6.4  | [Open on pub.dev](https://pub.dev/packages/share)  |
+| http             	| 0.12.0+4 | [Open on pub.dev](https://pub.dev/packages/http)             | url_launcher       | 5.4.5  | [Open on pub.dev](https://pub.dev/packages/url_launcher)        |
 
-## Got any Queries?
-If you got any queries or found a bug create a PR or ping me over on [hi@shivamgoyal.co](mailto:hi@shivamgoyal.co)
+## :label: Versioning
+I've used [Semantic Versioning 2.0.0](https://semver.org/) for versioning throughout the project.
 
-## Found me generous?
+## :question: Queries / Bugs
+If you got any queries or found a bug, open an [Issue](https://github.com/ShivamGoyal1899/EasyWeather/issues/new) or ping me over on [hi@itsshivam.com](mailto:hi@itsshivam.com)
 
-If you learned even a thing or two and want to thank me, consider buying me a drink :beer:
+## :memo: License
+Licensed under the [MIT License](./LICENSE).
 
- [![Paypal](https://img.shields.io/badge/Sponsor-Paypal-informational?style=for-the-badge&logo=paypal)](https://www.paypal.me/shivamgoyal1899)
-
-## License
-
-```
-MIT License
-
-Copyright (c) 2019 Shivam Goyal
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-```
+## :purple_heart: Thanks
+Thanks to all contributors and to sponsors for supporting the project.
+<p>
+  <a href="https://www.buymeacoffee.com/ShivamGoyal" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="30">
+  </a>
+  <a href="https://www.patreon.com/bePatron?u=31786845" target="_blank">
+    <img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Become a Patron!" height="30">
+  </a>
+  <a href="https://www.paypal.me/shivamgoyal1899" target="_blank">
+    <img src="https://www.paypalobjects.com/webstatic/en_AU/i/buttons/btn_paywith_primary_l.png" alt="Pay with PayPal!" height="30">
+  </a>
+  <a href="https://opencollective.com/shivamgoyal" target="_blank">
+    <img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" height="30">
+  </a>
+</p>
