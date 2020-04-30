@@ -6,6 +6,18 @@ import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 
 class ApiResponse {
+
+  Future<Weather> getWeatherByName(String city) async{
+    var defaultKey = "8a5d5a4287b457081c1a32e12d5e236b";
+
+    var url1 =
+        "https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$defaultKey";
+    final response = await http.get(url1);
+    return Weather.fromJson(json.decode(response.body));
+  }
+
+
+
   Future<Weather> getWeather() async {
     Position position = await Geolocator()
         .getLastKnownPosition(desiredAccuracy: LocationAccuracy.high);
