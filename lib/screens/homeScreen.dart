@@ -119,7 +119,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                   image: AssetImage('assets/images/header.png'),
                                   alignment: Alignment.centerRight),
                             ),
-                            height: 240.0,
                             child: Padding(
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 40.0),
@@ -134,6 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       fontSize: 45.0,
                                       fontWeight: FontWeight.w700,
                                     ),
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                   SizedBox(height: 10.0),
                                   Text(
@@ -169,7 +169,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       ),
                                       Container(
-                                        child: Row(
+                                        child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
                                           mainAxisSize: MainAxisSize.min,
@@ -181,18 +181,45 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   '.png',
                                               height: 40,
                                             ),
-                                            Text(
-                                                ' ' +
+                                            snapshot.data.weather[0].description
+                                                    .contains(' ')
+                                                ? Text(
                                                     snapshot.data.weather[0]
-                                                        .description[0]
-                                                        .toUpperCase() +
+                                                            .description
+                                                            .split(' ')[0][0]
+                                                            .toUpperCase() +
+                                                        snapshot.data.weather[0]
+                                                            .description
+                                                            .split(' ')[0]
+                                                            .substring(1) +
+                                                        '\n' +
+                                                        snapshot.data.weather[0]
+                                                            .description
+                                                            .split(' ')[1][0]
+                                                            .toUpperCase() +
+                                                        snapshot.data.weather[0]
+                                                            .description
+                                                            .split(' ')[1]
+                                                            .substring(1),
+                                                    style: TextStyle(
+                                                        fontSize: 16.0,
+                                                        fontWeight:
+                                                            FontWeight.w500),
+                                                    textAlign: TextAlign.center,
+                                                  )
+                                                : Text(
                                                     snapshot.data.weather[0]
-                                                        .description
-                                                        .substring(1),
-                                                style: TextStyle(
-                                                    fontSize: 20.0,
-                                                    fontWeight:
-                                                        FontWeight.w500)),
+                                                            .description[0]
+                                                            .toUpperCase() +
+                                                        snapshot.data.weather[0]
+                                                            .description
+                                                            .substring(1),
+                                                    style: TextStyle(
+                                                        fontSize: 16.0,
+                                                        fontWeight:
+                                                            FontWeight.w500),
+                                                    textAlign: TextAlign.center,
+                                                  ),
                                             SizedBox(height: 5.0)
                                           ],
                                         ),
@@ -214,8 +241,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             )),
                         Container(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 10.0, horizontal: 40.0),
+                          padding: EdgeInsets.fromLTRB(40, 20, 40, 5),
                           alignment: Alignment.centerLeft,
                           child: Text(
                             'Details',
@@ -224,10 +250,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Container(
-                          height: 260.0,
                           child: Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 20.0),
+                            padding: const EdgeInsets.fromLTRB(20, 5, 20, 20),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -349,8 +373,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                             SizedBox(height: 6.0),
                                             Text(
                                               snapshot.data.visibility
-                                                      .toString() +
-                                                  ' m',
+                                                          .toString() ==
+                                                      'null'
+                                                  ? 'N/A'
+                                                  : snapshot.data.visibility
+                                                          .toString() +
+                                                      ' m',
                                               style: TextStyle(
                                                   fontWeight: FontWeight.w700,
                                                   fontSize: 24.0),
@@ -418,7 +446,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             SizedBox(height: 6.0),
                                             Text(
                                               snapshot.data.wind.speed
-                                                      .toString() +
+                                                      .toStringAsFixed(1) +
                                                   " km/h",
                                               style: TextStyle(
                                                   fontWeight: FontWeight.w700,
