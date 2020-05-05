@@ -24,7 +24,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    dataState.getWeather();
     super.initState();
   }
 
