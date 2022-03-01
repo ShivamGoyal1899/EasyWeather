@@ -71,7 +71,7 @@ At this point, you’ve got the fully functional EasyWeather App running. For ad
 I've used [Semantic Versioning 2.0.0](https://semver.org/) for versioning throughout the project.
 
 ## :question: Queries / Bugs
-If you got any queries or found a bug, open an [Issue](https://github.com/ShivamGoyal1899/EasyWeather/issues/new) or ping me over on [hi@itsshivam.com](mailto:hi@itsshivam.com)
+If you got any queries or found a bug, open an [Issue](https://github.com/ShivamGoyal1899/EasyWeather/issues/new) or ping me over on [hey@goyalshivam.com](mailto:hey@goyalshivam.com)
 
 ## :memo: License
 Licensed under the [MIT License](./LICENSE).
