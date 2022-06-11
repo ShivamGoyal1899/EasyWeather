@@ -4,9 +4,6 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/ShivamGoyal1899/EasyWeather/actions?query=workflow%3A%22Flutter+CI%22">
-<img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/ShivamGoyal1899/EasyWeather/Flutter CI?label=Flutter%20CI&logo=GitHub&style=for-the-badge">
-</a>
   <a href="https://github.com/ShivamGoyal1899/EasyWeather/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/ShivamGoyal1899/EasyWeather?style=for-the-badge" alt="EasyWeather is released under the GNU General Public License." />
   </a>
@@ -78,17 +75,3 @@ Licensed under the [MIT License](./LICENSE).
 
 ## :purple_heart: Thanks
 Thanks to all contributors and to sponsors for supporting the project.
-<p>
-  <a href="https://www.buymeacoffee.com/ShivamGoyal" target="_blank">
-    <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="30">
-  </a>
-  <a href="https://www.patreon.com/bePatron?u=31786845" target="_blank">
-    <img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Become a Patron!" height="30">
-  </a>
-  <a href="https://www.paypal.me/shivamgoyal1899" target="_blank">
-    <img src="https://www.paypalobjects.com/webstatic/en_AU/i/buttons/btn_paywith_primary_l.png" alt="Pay with PayPal!" height="30">
-  </a>
-  <a href="https://opencollective.com/shivamgoyal" target="_blank">
-    <img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" height="30">
-  </a>
-</p>
