@@ -37,7 +37,7 @@ Show some love 💜 and Star ⭐️ the Repository to support the project.
 
 You can get the EasyWeather up and running on your local dev environment in 5 minutes with these four steps:
 
-1. **Install the Flutter SDK & Android Studio. [Instructions](https://medium.com/enappd/install-flutter-on-windows-and-mac-1fd1dde453ba).**
+1. **Install the Flutter SDK & Android Studio. [Instructions](https://blog.goyalshivam.com/install-flutter-on-windows-and-mac).**
 
 2. **Open Terminal & navigate to the root directory of the project.**
 
@@ -58,11 +58,13 @@ You can get the EasyWeather up and running on your local dev environment in 5 mi
 At this point, you’ve got the fully functional EasyWeather App running. For additional information on how you can customize your Flutter Apps, see [Google Codelabs](https://codelabs.developers.google.com/codelabs/flutter/) and [HackerNoon Guide](https://hackernoon.com/making-the-most-of-flutter-from-basics-to-customization-433171581d01).
 
 ## :ballot_box: Flutter / Dart Packages Used
-|    Package Name  	| Package Version 	|                           Package URL                          	|    Package Name      	| Package Version 	|                           Package URL                          	|
-|:----------------:	|:-------: |:-----------------------------------------------------------: |:-----------------: |:-----:	|:--------------------------------------------------------------:	|
-| cupertino_icons  	| 0.1.2    | [Open on pub.dev](https://pub.dev/packages/cupertino_icons)  | intl               | 0.16.1 | [Open on pub.dev](https://pub.dev/packages/intl)              	|
-| geolocator      	| 5.3.1    | [Open on pub.dev](https://pub.dev/packages/geolocator)       | share              | 0.6.4  | [Open on pub.dev](https://pub.dev/packages/share)  |
-| http             	| 0.12.0+4 | [Open on pub.dev](https://pub.dev/packages/http)             | url_launcher       | 5.4.5  | [Open on pub.dev](https://pub.dev/packages/url_launcher)        |
+
+- [cupertino_icons](https://pub.dev/packages/cupertino_icons)
+- [intl](https://pub.dev/packages/intl)
+- [geolocator](https://pub.dev/packages/geolocator)
+- [share](https://pub.dev/packages/share)
+- [http](https://pub.dev/packages/http)
+- [url_launcher](https://pub.dev/packages/url_launcher)
 
 ## :label: Versioning
 I've used [Semantic Versioning 2.0.0](https://semver.org/) for versioning throughout the project.
