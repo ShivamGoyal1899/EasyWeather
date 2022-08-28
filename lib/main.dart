@@ -1,4 +1,4 @@
-import 'package:EasyWeather/screens/splashScreen.dart';
+import 'package:easy_weather/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -6,23 +6,26 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]).then((_) {
-    runApp(MyApp());
+    runApp(const MyApp());
   });
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        accentColor: Colors.orangeAccent,
         scaffoldBackgroundColor: Colors.white,
-        fontFamily: 'GoogleSans',
         primaryColor: Colors.black,
-        primaryIconTheme: IconThemeData(color: Colors.black),
+        primaryIconTheme: const IconThemeData(color: Colors.black),
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          secondary: Colors.orangeAccent,
+        ),
       ),
-      home: SplashScreen(),
+      home: const HomeScreen(),
     );
   }
 }
